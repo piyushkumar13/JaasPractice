@@ -12,33 +12,33 @@ import javax.servlet.http.HttpServletResponse;
 public class BasicAuthenticatedServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+
 		PrintWriter writer = response.getWriter();
 		response.setContentType("text/html");
-		
+
 		Principal principal = request.getUserPrincipal();
 		String principal_name = "Unauthenticated user";
-		if(null != principal){
+		if (null != principal) {
 			principal_name = principal.getName();
 		}
-		
-		writer.write("Hi!! You are "+ principal_name);
-		
+
+		writer.write("Hi!! You are " + principal_name);
+
 	}
-	
+
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		PrintWriter writer = response.getWriter();
 		response.setContentType("text/html");
-		
+
 		Principal principal = request.getUserPrincipal();
 		String principal_name = "Unauthenticated user";
-		if(null != principal){
+		if (null != principal) {
 			principal_name = principal.getName();
 		}
-		
-		writer.write("Hi!! You are "+ principal_name);
-		
+
+		writer.write("Hi!! You are " + principal_name);
+
 	}
-	
+
 }

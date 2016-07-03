@@ -8,9 +8,15 @@
 		<servlet-name>BasicAuthenticatedServlet</servlet-name>
 		<servlet-class>com.practice.jaas.BasicAuthenticatedServlet</servlet-class>
 	</servlet>
+	
 	<servlet>
 		<servlet-name>FormAuthenticatedServlet</servlet-name>
 		<servlet-class>com.practice.jaas.FormAuthenticatedServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	<servlet-name>HttpServletImpl</servlet-name>
+    <servlet-class>com.practice.jaas.programmatic.HttpServletImpl</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -21,6 +27,11 @@
 	<servlet-mapping>
 		<servlet-name>FormAuthenticatedServlet</servlet-name>
 		<url-pattern>/auth/form</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	<servlet-name>HttpServletImpl</servlet-name>
+	<url-pattern>/auth/programmatic/httpservlet</url-pattern>
 	</servlet-mapping>
 
 	<!-- We cannot configure basic as well as form based authentication in the 
