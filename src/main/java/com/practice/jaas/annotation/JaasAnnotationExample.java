@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(value = "/auth/annotation")
-@ServletSecurity(httpMethodConstraints = { @HttpMethodConstraint(
-		value = "POST",
-		rolesAllowed = { "javaee" }) })
+@ServletSecurity(httpMethodConstraints = { @HttpMethodConstraint(value = "POST", rolesAllowed = { "javaee" }) })
 public class JaasAnnotationExample extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
